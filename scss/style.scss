@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+$dark1C: #1C1C1C;
+$grayE0: #E0E0E0;
+$grayD5: #D5D5D5;
+$gray9A: #8D909A;
+
+body{
+    font-family: "Gilroy";
+    background-color: $dark1C;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+@mixin my($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+// Fonts
+
+@mixin fonts($size, $weight, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+@mixin font-genarator($font-family, $weight, $url) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        src: url("../fonts/Gilroy-#{$url}.ttf");
+    }
+}
+
+@for $var from 1 to 3 {
+    $f-weight: 600, 500;
+    $f-url: "SemiBold", "Medium";
+    @include font-genarator("Gilroy", nth($f-weight, $var), nth($f-url, $var));
+}
+
+// Container
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$screensize: (
+    "576px": "540px",
+    "768px": "720px",
+    "1200px": "1140px",
+    "1920px": "1800px",
+);
+
+@mixin media($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@each $screen, $max in $screensize {
+    .container{
+        @include media($screen) {
+            max-width: unquote($max);
+        }
+    }
+}
+
+@import "partials/main-sec";
