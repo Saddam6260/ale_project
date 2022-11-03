@@ -1,0 +1,66 @@
+.introduction-sec{
+    background-color: $grayD4;
+
+    @include media(1920px){
+        background-color: $dark1C;
+    }
+}
+.intro-wrap{
+    @include px(50px, 50px);
+    @include py(40px, 40px);
+
+    @include media(1200px) {
+        @include px(100px, 100px);
+        @include py(97px, 35px);
+    }
+    @include media(1920px) {
+        background-color: $grayD5;
+        @include my(18px, 18px);
+        @include py(250px, 250px);
+        margin-top: -285px;
+    }
+
+    p{
+        @include fonts(43px, 500, 50px);
+        color: $gray3C;
+
+        @include media(1200px) {
+            font-size: 53px;
+            line-height: 62px;
+        }
+    }
+    .lbtn{
+        background-color: $dark12;
+        @include px(11px, 11px);
+        @include py(25px, 25px);
+        color: $grayEC;
+        @include fonts(40px, 500, 47px);
+        margin-top: 50px;
+    }
+}
+
+.lbtn-wrap{
+    text-align: center;
+
+    @include media(1200px) {
+        text-align: start;
+    }
+}
+// project 
+
+.project-wrap{
+    margin-left: 280px;
+    margin-top: 200px;
+    display: flex;
+    flex-flow: row wrap;
+
+    h1{
+        @include fonts(50px, 500, 52px);
+        color: $grayEC;
+    }
+    p{
+        color: white;
+        @include fonts(30px, 500, 35px);
+        margin-top: 6px;
+    }
+}

@@ -3,10 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
 }
+$dark12: #121212;
 $dark1C: #1C1C1C;
 $grayE0: #E0E0E0;
 $grayD5: #D5D5D5;
 $gray9A: #8D909A;
+$grayD4: #D4D4D4;
+$gray3C: #41453C;
+$grayEC: #EFF3EC;
 
 body{
     font-family: "Gilroy";
@@ -23,6 +27,18 @@ a{
 @mixin my($left, $right) {
     margin-left: $left;
     margin-right: $right;
+}
+@mixin mx($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+@mixin py($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+@mixin px($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
 }
 
 // Fonts
@@ -41,9 +57,9 @@ a{
     }
 }
 
-@for $var from 1 to 3 {
-    $f-weight: 600, 500;
-    $f-url: "SemiBold", "Medium";
+@for $var from 1 to 4 {
+    $f-weight: 600, 500, 500;
+    $f-url: "SemiBold", "Medium", "MediumItalic";
     @include font-genarator("Gilroy", nth($f-weight, $var), nth($f-url, $var));
 }
 
@@ -76,4 +92,20 @@ $screensize: (
     }
 }
 
+// common style
+.btn {
+    @include px(10px, 10px);
+    @include py(12px, 12px);
+    background-color: $dark12;
+    border-radius: 12px;
+    @include fonts(30px, 600, 35px);
+
+    a{
+        color: $grayEC;
+    }
+}
+
+
 @import "partials/main-sec";
+@import "partials/introduction";
+@import "partials/footer";

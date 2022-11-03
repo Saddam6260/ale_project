@@ -1,0 +1,214 @@
+footer{
+    background-color: $grayE0;
+}
+
+.foot-wrap{
+    @include px(40px, 30px);
+    @include my(10px, 10px);
+
+    @include media(576px) {
+        margin-left: 20px;
+        @include px(50px, 40px);
+    }
+    @include media(768px) {
+        margin-left: 36px;
+    }
+    @include media(992px) {
+        padding-top: 70px;
+    }
+    @include media(1200px) {
+        padding-top: 100px;
+    }
+    @include media(1920px) {
+        margin-left: 200px;
+    }
+}
+
+.tell-me-idea{
+
+    h1{
+        display: flex;
+        flex-flow: column;
+        @include fonts(50px, 500, 60px);
+        color: $gray3C;
+        margin-bottom: 50px;
+        
+        @include media(576px) {
+            font-size: 60px;
+            line-height: 70px;
+            margin-bottom: 70px;
+        }
+        @include media(768px) {
+            font-size: 70px;
+            line-height: 80px;
+            margin-bottom: 94px;
+        }
+        @include media(1200px) {
+            font-size: 80px;
+            line-height: 94px;
+            margin-bottom: 94px;
+        }
+        @include media(1920px) {
+            display: block;
+        }
+    }
+}
+
+.dc-wrap{
+    display: flex;
+    flex-flow: column wrap;
+
+    @include media(1200px) {
+        flex-flow: row wrap;
+    }
+
+    p{
+        color: $gray3C;
+    }
+}
+.discuse{
+    p{
+        display: flex;
+        flex-flow: column wrap;
+        margin-bottom: 37px;
+        @include fonts(30px, 500, 40px);
+
+        @include media(768px) {
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+    a{
+        @include fonts(30px, 600, 37px);
+        color: $dark12;
+    }
+}
+
+.contact{
+    display: flex;
+    flex-flow: column;
+    margin-top: 60px;
+
+    @include media(1200px) {
+        margin-top: 0px;
+        margin-left: 174px;
+    }
+    @include media(1920px) {
+        margin-left: 623px;
+    }
+    p{
+        @include fonts(30px, 500, 40px);
+        margin-bottom: 35px;
+
+        @include media(768px) {
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+    .btn-wrap1{
+        margin-bottom: 20px;
+    }
+}
+
+.svl-wrap{
+    margin-top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include media(768px) {
+        margin-top: 80px;
+    }
+    @include media(1200px) {
+        margin-top: 100px;
+        column-gap: 160px
+    }
+    @include media(1929px) {
+        column-gap: 0px;
+    }
+    p{
+        @include fonts(20px, 500, 23px);
+        color: $gray3C;
+    }
+    a{
+        @include fonts(20px, 500, 23px);
+        color: black;
+        opacity: 0.2;
+    }
+}
+
+.socials{
+    width: 100%;
+
+    @include media(1200px) {
+        width: auto;
+    }
+
+    ul{
+        display: flex;
+        flex-flow: row wrap;
+        column-gap: 60px;
+        margin-top: 20px;
+
+        @include media(576px) {
+            column-gap: 82px;
+        }
+        @include media(1200px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.version{
+    margin-top: 20px;
+    width: 50%;
+
+    @include media(1200px) {
+        margin-top: 0px;
+        width: auto;
+    }
+    @include media(1920px) {
+        margin-left: 456px;
+    }
+
+    p{
+        margin-bottom: 20px;
+
+        @include media(1200px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+.foot-location{
+    margin-top: 20px;
+    width: 50%;
+
+    @include media(1200px) {
+        margin-top: 0px;
+        width: auto;
+    }
+    @include media(1920px) {
+        margin-left: 100px;
+    }
+    p{
+        margin-bottom: 20px;
+
+        @include media(1200px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+// footer bottom
+
+.footpera-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include px(20px, 20px);
+
+    p{
+        color: $grayEC;
+        @include fonts(20px, 500, 23px);
+        opacity: 0.2;
+        text-align: center;
+    }
+}
