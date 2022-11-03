@@ -1,66 +1,75 @@
 .introduction-sec{
-    background-color: $grayD4;
+    background-color: $grayD5;
 
-    @include media(1920px){
+    @include media(1920px) {
         background-color: $dark1C;
     }
 }
-.intro-wrap{
-    @include px(50px, 50px);
-    @include py(40px, 40px);
 
+.intro-wrap{
+    @include my(10px, 10px);
+    @include px(40px, 40px);
+
+    @include media(768px) {
+        @include px(50px, 50px);
+        @include my(40px, 40px);
+    }
     @include media(1200px) {
         @include px(100px, 100px);
-        @include py(97px, 35px);
+        @include my(97px, 97px);
     }
     @include media(1920px) {
-        background-color: $grayD5;
         @include my(18px, 18px);
         @include py(250px, 250px);
-        margin-top: -285px;
+        background-color: $grayD5;
+        top: -288px;
+        position: relative;
     }
 
     p{
-        @include fonts(43px, 500, 50px);
+        @include fonts(33px, 500, 40px);
         color: $gray3C;
 
+        @include media(768px) {
+            font-size: 43px;
+            line-height: 50px;
+        }
         @include media(1200px) {
             font-size: 53px;
             line-height: 62px;
         }
     }
-    .lbtn{
-        background-color: $dark12;
-        @include px(11px, 11px);
-        @include py(25px, 25px);
-        color: $grayEC;
-        @include fonts(40px, 500, 47px);
-        margin-top: 50px;
-    }
+    
 }
 
 .lbtn-wrap{
     text-align: center;
+    margin-top: 40px;
 
+    @include media(768px) {
+        margin-top: 50px;
+    }
     @include media(1200px) {
         text-align: start;
     }
-}
-// project 
-
-.project-wrap{
-    margin-left: 280px;
-    margin-top: 200px;
-    display: flex;
-    flex-flow: row wrap;
-
-    h1{
-        @include fonts(50px, 500, 52px);
+    .lbtn{
+        border: none;
+        background-color: $dark12;
+        @include py(25px, 25px);
+        @include px(11px, 11px);
+        border-radius: 6px;
+        @include fonts(30px, 500, 40px);
         color: $grayEC;
+
+        @include media(768px) {
+            font-size: 40px;
+            line-height: 47px;
+        }
     }
-    p{
-        color: white;
-        @include fonts(30px, 500, 35px);
-        margin-top: 6px;
-    }
+}
+
+// Project 
+
+.pro-head{
+    color: white;
 }

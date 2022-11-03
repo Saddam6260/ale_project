@@ -29,7 +29,7 @@ a {
 }
 @font-face {
   font-family: "Gilroy";
-  font-weight: 500;
+  font-weight: 700;
   src: url("../fonts/Gilroy-MediumItalic.ttf");
 }
 .container {
@@ -79,6 +79,17 @@ a {
 
 .main-section {
   background-color: #E0E0E0;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 1200px) {
+  .main-section {
+    padding-bottom: 151px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .main-section {
+    padding-bottom: 450px;
+  }
 }
 
 header {
@@ -147,39 +158,11 @@ header {
   }
 }
 
-.main-heding-img {
-  margin-top: 140px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-@media only screen and (min-width: 1200px) {
-  .main-heding-img {
-    margin-top: 196px;
-    justify-content: start;
-    margin-left: 50px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .main-heding-img {
-    margin-top: 268px;
-    margin-left: 50px;
-  }
-}
-.main-heding-img img {
-  max-width: 573px;
-}
-@media only screen and (min-width: 1200px) {
-  .main-heding-img img {
-    max-width: 868px;
-  }
-}
-
 .main-sec-wrap {
   background-image: url("../img/main-bg.pn");
 }
 .main-sec-wrap h1 {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 600;
   line-height: 94px;
   color: #8D909A;
@@ -187,6 +170,11 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .main-sec-wrap h1 {
+    font-size: 80px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .main-sec-wrap h1 {
@@ -205,26 +193,55 @@ header {
   }
 }
 
+.clip-heding h1 {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 133%;
+  font-style: italic;
+  background-image: url("../img/text-bg.webp");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 768px) {
+  .clip-heding h1 {
+    font-size: 120px;
+    margin-top: 130px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .clip-heding h1 {
+    font-size: 180px;
+    margin-left: 50px;
+    margin-top: 190px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .clip-heding h1 {
+    font: 230px;
+    margin-top: 268px;
+  }
+}
+
 .lt-wrap {
   display: flex;
   flex-flow: row wrap;
   column-gap: 89px;
   justify-content: center;
   margin-top: 40px;
-  padding-bottom: 100px;
 }
 @media only screen and (min-width: 1200px) {
   .lt-wrap {
     justify-content: start;
     margin-top: 60px;
     margin-left: 128px;
-    padding-bottom: 151px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .lt-wrap {
     margin-left: 258px;
-    padding-bottom: 450px;
   }
 }
 
@@ -248,7 +265,7 @@ header {
 }
 
 .introduction-sec {
-  background-color: #D4D4D4;
+  background-color: #D5D5D5;
 }
 @media only screen and (min-width: 1920px) {
   .introduction-sec {
@@ -257,34 +274,49 @@ header {
 }
 
 .intro-wrap {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .intro-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .intro-wrap {
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 97px;
-    padding-right: 35px;
+    margin-left: 97px;
+    margin-right: 97px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .intro-wrap {
-    background-color: #D5D5D5;
     margin-left: 18px;
     margin-right: 18px;
     padding-left: 250px;
     padding-right: 250px;
-    margin-top: -285px;
+    background-color: #D5D5D5;
+    top: -288px;
+    position: relative;
   }
 }
 .intro-wrap p {
-  font-size: 43px;
+  font-size: 33px;
   font-weight: 500;
-  line-height: 50px;
+  line-height: 40px;
   color: #41453C;
+}
+@media only screen and (min-width: 768px) {
+  .intro-wrap p {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .intro-wrap p {
@@ -292,46 +324,191 @@ header {
     line-height: 62px;
   }
 }
-.intro-wrap .lbtn {
-  background-color: #121212;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 25px;
-  padding-right: 25px;
-  color: #EFF3EC;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 47px;
-  margin-top: 50px;
-}
 
 .lbtn-wrap {
   text-align: center;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .lbtn-wrap {
+    margin-top: 50px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .lbtn-wrap {
     text-align: start;
   }
 }
-
-.project-wrap {
-  margin-left: 280px;
-  margin-top: 200px;
-  display: flex;
-  flex-flow: row wrap;
-}
-.project-wrap h1 {
-  font-size: 50px;
+.lbtn-wrap .lbtn {
+  border: none;
+  background-color: #121212;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 6px;
+  font-size: 30px;
   font-weight: 500;
-  line-height: 52px;
+  line-height: 40px;
   color: #EFF3EC;
 }
-.project-wrap p {
+@media only screen and (min-width: 768px) {
+  .lbtn-wrap .lbtn {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.pro-head {
   color: white;
+}
+
+.project-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.lssgg {
+  margin-bottom: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .lssgg {
+    margin-bottom: 200px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.lssgg-img {
+  max-width: 413px;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg-img {
+    max-width: 513px;
+  }
+}
+.lssgg-img img {
+  width: 100%;
+}
+
+.lssgg-body {
+  width: 50%;
+  text-align: center;
+}
+.lssgg-body p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #EFF3EC;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg-body p {
+    font-size: 25px;
+    line-height: 29px;
+    margin-top: 70px;
+  }
+}
+.lssgg-body h1 {
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 45px;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg-body h1 {
+    font-size: 45px;
+    line-height: 53px;
+  }
+}
+.lssgg-body h3 {
+  display: flex;
+  flex-flow: column wrap;
+  color: #939393;
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 45px;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg-body h3 {
+    font-size: 45px;
+    line-height: 53px;
+  }
+}
+.lssgg-body h2 {
+  color: #EFF3EC;
+  margin-top: 20px;
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
-  margin-top: 6px;
+}
+@media only screen and (min-width: 768px) {
+  .lssgg-body h2 {
+    font-size: 35px;
+    line-height: 41px;
+  }
+}
+
+.lssgg-btn {
+  margin-top: 30px;
+}
+.lssgg-btn .btn {
+  background-color: #FEFEFF;
+  border-radius: 7px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #121212;
+}
+
+.insurence {
+  max-width: 448px;
+  margin-bottom: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .insurence {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .insurence {
+    margin-bottom: 200px;
+  }
+}
+
+.moon-race {
+  max-width: 413px;
+}
+@media only screen and (min-width: 768px) {
+  .moon-race {
+    max-width: 597px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .moon-race {
+    max-width: 797px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .moon-race {
+    max-width: 985px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .moon-race {
+    max-width: 1258px;
+  }
+}
+.moon-race img {
+  width: 100%;
 }
 
 footer {
@@ -582,12 +759,23 @@ footer {
   }
 }
 
+.footer-bottom {
+  background-color: #232325;
+}
+
 .footpera-wrap {
   display: flex;
+  height: 65px;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .footpera-wrap {
+    justify-content: start;
+  }
 }
 .footpera-wrap p {
   color: #EFF3EC;
@@ -596,6 +784,11 @@ footer {
   line-height: 23px;
   opacity: 0.2;
   text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .footpera-wrap p {
+    margin-left: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

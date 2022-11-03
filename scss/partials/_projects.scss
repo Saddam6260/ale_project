@@ -1,0 +1,126 @@
+.project-wrap{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.lssgg{
+    margin-bottom: 70px;
+
+    @include media(768px) {
+        margin-bottom: 100px;
+    }
+    @include media(1200px) {
+        margin-bottom: 200px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+.lssgg-img{
+    max-width: 413px;
+
+    @include media(768px) {
+        max-width: 513px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+.lssgg-body{
+    width: 50%;
+    text-align: center;
+    p{
+        margin-top: 50px;
+        @include fonts(20px, 500, 25px);
+        color: $grayEC;
+
+        @include media(768px) {
+            font-size: 25px;
+            line-height: 29px;
+            margin-top: 70px;
+        }
+    }
+
+    h1{
+        margin-top: 5px;
+        @include fonts(40px, 500, 45px);
+        color: white;
+
+        @include media(768px) {
+            font-size: 45px;
+            line-height: 53px;
+        }
+    }
+    h3{
+        display: flex;
+        flex-flow: column wrap;
+        color: $gray93;
+        margin-top: 5px;
+        @include fonts(40px, 500, 45px);
+
+        @include media(768px) {
+            font-size: 45px;
+            line-height: 53px;
+        }
+    }
+    h2{
+        color: $grayEC;
+        margin-top: 20px;
+        @include fonts(30px, 500, 35px);
+
+        @include media(768px) {
+            font-size: 35px;
+            line-height: 41px;
+        }
+    }
+}
+
+.lssgg-btn{
+    margin-top: 30px;
+
+    .btn{
+        background-color:  #FEFEFF;
+        border-radius: 7px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $dark12;
+    }
+}
+
+.insurence{
+    max-width: 448px;
+    margin-bottom: 70px;
+
+    @include media(768px) {
+        margin-bottom: 100px;
+    }
+    @include media(1200px) {
+        margin-bottom: 200px;
+    }
+}
+
+// Race
+
+.moon-race{
+    max-width: 413px;
+
+    @include media(768px) {
+        max-width: 597px;
+    }
+    @include media(992px) {
+        max-width: 797px;
+    }
+    @include media(1200px) {
+        max-width: 985px;
+    }
+    @include media(1920px) {
+        max-width: 1258px;
+    }
+    img{
+        width: 100%;
+    }
+
+}

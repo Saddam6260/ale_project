@@ -11,6 +11,7 @@ $gray9A: #8D909A;
 $grayD4: #D4D4D4;
 $gray3C: #41453C;
 $grayEC: #EFF3EC;
+$gray93: #939393;
 
 body{
     font-family: "Gilroy";
@@ -58,7 +59,7 @@ a{
 }
 
 @for $var from 1 to 4 {
-    $f-weight: 600, 500, 500;
+    $f-weight: 600, 500, 700;
     $f-url: "SemiBold", "Medium", "MediumItalic";
     @include font-genarator("Gilroy", nth($f-weight, $var), nth($f-url, $var));
 }
@@ -105,7 +106,8 @@ $screensize: (
     }
 }
 
-
 @import "partials/main-sec";
 @import "partials/introduction";
+@import "partials/projects";
 @import "partials/footer";
+

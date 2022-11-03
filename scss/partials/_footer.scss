@@ -198,17 +198,29 @@ footer{
     }
 }
 // footer bottom
-
+.footer-bottom{
+    background-color: #232325;
+}
 .footpera-wrap{
     display: flex;
+    height: 65px;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     @include px(20px, 20px);
+
+    @include media(1200px) {
+        justify-content: start;
+    }
 
     p{
         color: $grayEC;
         @include fonts(20px, 500, 23px);
         opacity: 0.2;
         text-align: center;
+
+        @include media(1200px) {
+            margin-left: 200px;
+        }
     }
 }
