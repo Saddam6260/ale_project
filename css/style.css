@@ -85,17 +85,6 @@ a {
 
 .main-section {
   background-color: #E0E0E0;
-  padding-bottom: 100px;
-}
-@media only screen and (min-width: 1200px) {
-  .main-section {
-    padding-bottom: 151px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .main-section {
-    padding-bottom: 450px;
-  }
 }
 
 header {
@@ -165,7 +154,29 @@ header {
 }
 
 .main-sec-wrap {
-  background-image: url("../img/main-bg.pn");
+  padding-bottom: 100px;
+  background-image: url("../img/main-sec-img.png");
+  background-size: 955px 853px;
+  background-position: 100% 31px;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+@media only screen and (min-width: 768px) {
+  .main-sec-wrap {
+    padding-top: 130px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-sec-wrap {
+    padding-bottom: 151px;
+    padding-top: 190px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .main-sec-wrap {
+    padding-bottom: 450px;
+    padding-top: 268px;
+  }
 }
 .main-sec-wrap h1 {
   font-size: 70px;
@@ -186,7 +197,6 @@ header {
   .main-sec-wrap h1 {
     justify-content: start;
     margin-left: 139px;
-    margin-top: 60px;
     font-size: 130px;
     line-height: 152px;
   }
@@ -209,7 +219,6 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  margin-top: 100px;
 }
 @media only screen and (min-width: 576px) {
   .clip-heding h1 {
@@ -219,20 +228,18 @@ header {
 @media only screen and (min-width: 768px) {
   .clip-heding h1 {
     font-size: 120px;
-    margin-top: 130px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .clip-heding h1 {
     font-size: 180px;
     margin-left: 50px;
-    margin-top: 190px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .clip-heding h1 {
     font: 230px;
-    margin-top: 268px;
+    margin-top: 0px;
   }
 }
 
