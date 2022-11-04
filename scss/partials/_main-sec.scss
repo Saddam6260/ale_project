@@ -99,7 +99,7 @@ header{
 .clip-heding{
 
     h1{
-        @include fonts(90px, 700, 133%);
+        @include fonts(70px, 700, 133%);
         font-style: italic;
         background-image: url("../img/text-bg.webp");
         background-size: cover;
@@ -107,6 +107,10 @@ header{
         -webkit-background-clip: text;
         color: transparent;
         margin-top: 100px;
+
+        @include media(576px) {
+            font-size: 90px;
+        }
 
         @include media(768px) {
             font-size: 120px;

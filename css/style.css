@@ -69,9 +69,15 @@ a {
   padding-right: 12px;
   background-color: #121212;
   border-radius: 12px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
-  line-height: 35px;
+  line-height: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .btn {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 .btn a {
   color: #EFF3EC;
@@ -194,7 +200,7 @@ header {
 }
 
 .clip-heding h1 {
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 133%;
   font-style: italic;
@@ -204,6 +210,11 @@ header {
   -webkit-background-clip: text;
   color: transparent;
   margin-top: 100px;
+}
+@media only screen and (min-width: 576px) {
+  .clip-heding h1 {
+    font-size: 90px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .clip-heding h1 {
@@ -371,11 +382,17 @@ header {
 }
 
 .lssgg {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 70px;
+  max-width: 413px;
 }
 @media only screen and (min-width: 768px) {
   .lssgg {
     margin-bottom: 100px;
+    max-width: 513px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -383,15 +400,26 @@ header {
     margin-bottom: 200px;
     display: flex;
     flex-flow: row wrap;
+    margin-left: 21px;
+    margin-right: 21px;
+    max-width: 1095px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .lssgg {
+    align-items: start;
+    max-width: 1551px;
   }
 }
 
-.lssgg-img {
-  max-width: 413px;
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .lssgg-img {
     max-width: 513px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .lssgg-img {
+    max-width: 900px;
   }
 }
 .lssgg-img img {
@@ -399,8 +427,19 @@ header {
 }
 
 .lssgg-body {
-  width: 50%;
   text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .lssgg-body {
+    text-align: start;
+    margin-left: 57px;
+    max-width: 521px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .lssgg-body {
+    margin-left: 120px;
+  }
 }
 .lssgg-body p {
   margin-top: 50px;
@@ -414,6 +453,11 @@ header {
     font-size: 25px;
     line-height: 29px;
     margin-top: 70px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .lssgg-body p {
+    margin-top: 0px;
   }
 }
 .lssgg-body h1 {
@@ -457,6 +501,11 @@ header {
     line-height: 41px;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .lssgg-body h2 {
+    margin-top: 232px;
+  }
+}
 
 .lssgg-btn {
   margin-top: 30px;
@@ -470,18 +519,57 @@ header {
 }
 
 .insurence {
-  max-width: 448px;
+  max-width: 380px;
   margin-bottom: 70px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 768px) {
   .insurence {
+    max-width: 448px;
     margin-bottom: 100px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .insurence {
     margin-bottom: 200px;
+    max-width: 1036px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 188px;
   }
+}
+@media only screen and (min-width: 1920px) {
+  .insurence {
+    max-width: 1310px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .insurence .lssgg-body {
+    display: flex;
+    order: 1;
+    flex-flow: column wrap;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .insurence-img {
+    max-width: 448px;
+    display: flex;
+    flex-flow: column;
+    order: 2;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .insurence-img {
+    max-width: 722px;
+  }
+}
+.insurence-img img {
+  width: 100%;
 }
 
 .moon-race {
@@ -509,6 +597,131 @@ header {
 }
 .moon-race img {
   width: 100%;
+}
+
+.race-body {
+  text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .race-body {
+    text-align: start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.race-body p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #EFF3EC;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .race-body p {
+    margin-top: 70px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .race-body p {
+    margin-top: 42px;
+  }
+}
+.race-body h1 {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 45px;
+  color: white;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .race-body h1 {
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 22px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .race-body h1 {
+    margin-top: 10px;
+  }
+}
+.race-body h3 {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 45px;
+  color: #939393;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .race-body h3 {
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 22px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .race-body h3 {
+    margin-top: 10px;
+  }
+}
+
+.branding {
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .branding {
+    margin-top: 22px;
+  }
+}
+.branding h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #EFF3EC;
+}
+@media only screen and (min-width: 768px) {
+  .branding h2 {
+    font-size: 35px;
+    line-height: 41px;
+  }
+}
+
+.check-project {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .check-project {
+    margin-top: 80px;
+    margin-bottom: 126px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .check-project {
+    text-align: end;
+    margin-top: 140px;
+    margin-bottom: 200px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .check-project {
+    margin-bottom: 366px;
+  }
+}
+.check-project a {
+  color: #EFF3EC;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .check-project a {
+    font-size: 40px;
+    line-height: 47px;
+  }
 }
 
 footer {

@@ -99,7 +99,12 @@ $screensize: (
     @include py(12px, 12px);
     background-color: $dark12;
     border-radius: 12px;
-    @include fonts(30px, 600, 35px);
+    @include fonts(25px, 600, 30px);
+
+    @include media(768px) {
+        font-size: 30px;
+        line-height: 35px;
+    }
 
     a{
         color: $grayEC;

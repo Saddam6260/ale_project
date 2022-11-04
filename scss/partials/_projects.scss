@@ -5,33 +5,53 @@
     align-items: center;
 }
 .lssgg{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 70px;
+    max-width: 413px;
 
     @include media(768px) {
         margin-bottom: 100px;
+        max-width: 513px;
     }
     @include media(1200px) {
         margin-bottom: 200px;
         display: flex;
         flex-flow: row wrap;
+        @include my(21px, 21px);
+        max-width: 1095px;
+    }
+    @include media(1920px) {
+        align-items: start;
+        max-width: 1551px;
     }
 }
 
 .lssgg-img{
-    max-width: 413px;
-
-    @include media(768px) {
+    @include media(1200px) {
         max-width: 513px;
     }
-
+    @include media(1920px) {
+        max-width: 900px;
+    }
     img{
         width: 100%;
     }
 }
 
 .lssgg-body{
-    width: 50%;
     text-align: center;
+
+    @include media(1200px) {
+        text-align: start;
+        margin-left: 57px;
+        max-width: 521px;
+    }
+    @include media(1920px) {
+        margin-left: 120px;
+    }
     p{
         margin-top: 50px;
         @include fonts(20px, 500, 25px);
@@ -41,6 +61,9 @@
             font-size: 25px;
             line-height: 29px;
             margin-top: 70px;
+        }
+        @include media(1200px) {
+            margin-top: 0px;
         }
     }
 
@@ -75,6 +98,9 @@
             font-size: 35px;
             line-height: 41px;
         }
+        @include media(1920px) {
+            margin-top: 232px;
+        }
     }
 }
 
@@ -90,17 +116,58 @@
     }
 }
 
+// Insurence
+
 .insurence{
-    max-width: 448px;
+    max-width: 380px;
     margin-bottom: 70px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 
     @include media(768px) {
+        max-width: 448px;
         margin-bottom: 100px;
     }
     @include media(1200px) {
         margin-bottom: 200px;
+        max-width: 1036px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        column-gap: 188px;
+    }
+    @include media(1920px) {
+        max-width: 1310px;
+    }
+
+    .lssgg-body{
+        @include media(1200px) {
+            display: flex;
+            order: 1;
+            flex-flow: column wrap;
+            margin-left: 0px;
+        }
     }
 }
+.insurence-img{
+
+    @include media(1200px) {
+        max-width: 448px;
+        display: flex;
+        flex-flow: column;
+        order: 2;
+    }
+    @include media(1920px) {
+        max-width: 722px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+
 
 // Race
 
@@ -122,5 +189,98 @@
     img{
         width: 100%;
     }
+}
+.race-body{
+    text-align: center;
 
+    @include media(1200px) {
+        text-align: start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p{
+        @include fonts(20px, 500, 25px);
+        color: $grayEC;
+        margin-top: 50px;
+
+        @include media(768px) {
+            margin-top: 70px;
+        }
+        @include media(1200px) {
+            margin-top: 42px;
+        }
+    }
+    h1{
+        @include fonts(35px, 500, 45px);
+        color: white;
+        margin-top: 10px;
+
+        @include media(768px) {
+            font-size: 45px;
+            line-height: 53px;
+            margin-top: 22px;
+        }
+        @include media(1200px) {
+            margin-top: 10px;
+        }
+    }
+    h3{
+        @include fonts(35px, 500, 45px);
+        color: $gray93;
+        margin-top: 10px;
+
+        @include media(768px) {
+            font-size: 45px;
+            line-height: 53px;
+            margin-top: 22px;
+        }
+        @include media(1920px) {
+            margin-top: 10px;
+        }
+    }
+
+}
+.branding{
+    margin-top: 10px;
+
+    @include media(768px) {
+        margin-top: 22px;
+    }
+    h2{
+        @include fonts(30px, 500, 35px);
+        color: $grayEC;
+
+        @include media(768px) {
+            font-size: 35px;
+            line-height: 41px;
+        }
+    }
+}
+
+.check-project{
+    text-align: center;
+    @include mx(60px, 80px);
+
+    @include media(768px) {
+        @include mx(80px, 126px);
+    }
+    @include media(1200px) {
+        text-align: end;
+        @include mx(140px, 200px);  
+    }
+    @include media(1920px) {
+        margin-bottom: 366px;
+    }
+    a{
+        color: $grayEC;
+        @include fonts(35px, 500, 40px);
+        
+        @include media(768px) {
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }    
 }
