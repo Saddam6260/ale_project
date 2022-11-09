@@ -282,11 +282,11 @@ header {
   color: #41453C;
 }
 
-.introduction-sec {
+.introduction-sec .intro-bg {
   background-color: #D5D5D5;
 }
 @media only screen and (min-width: 1920px) {
-  .introduction-sec {
+  .introduction-sec .intro-bg {
     background-color: #1C1C1C;
   }
 }

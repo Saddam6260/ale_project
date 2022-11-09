@@ -1,9 +1,11 @@
 .introduction-sec{
+   .intro-bg{
     background-color: $grayD5;
 
     @include media(1920px) {
         background-color: $dark1C;
     }
+   }
 }
 
 .intro-wrap{
