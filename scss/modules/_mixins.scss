@@ -1,0 +1,50 @@
+
+@mixin my($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin mx($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+@mixin py($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+@mixin px($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+// container
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$screensize: (
+    $xs : 400px,
+    $sm : 540px,
+    $md : 720px,
+    $lg : 940px,
+    $xl : 1140px,
+    $xxl : 1320px,
+    $mxl : 1700px,
+    $lxl : 1800px,
+);
+
+@mixin media($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@each $screen, $max in $screensize {
+    .container{
+        @include media($screen) {
+            max-width: ($max);
+        }
+    }
+}

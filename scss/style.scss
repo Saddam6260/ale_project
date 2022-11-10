@@ -1,118 +1,18 @@
+@import "modules/variables";
+@import "modules/fonts";
+@import "modules/mixins";
+@import "modules/common";
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-$dark12: #121212;
-$dark1C: #1C1C1C;
-$grayE0: #E0E0E0;
-$grayD5: #D5D5D5;
-$gray9A: #8D909A;
-$grayD4: #D4D4D4;
-$gray3C: #41453C;
-$grayEC: #EFF3EC;
-$gray93: #939393;
 
-body{
-    font-family: "Gilroy";
-    background-color: $dark1C;
-}
-
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-
-@mixin my($left, $right) {
-    margin-left: $left;
-    margin-right: $right;
-}
-@mixin mx($top, $bottom) {
-    margin-top: $top;
-    margin-bottom: $bottom;
-}
-@mixin py($left, $right) {
-    padding-left: $left;
-    padding-right: $right;
-}
-@mixin px($top, $bottom) {
-    padding-top: $top;
-    padding-bottom: $bottom;
-}
-
-// Fonts
-
-@mixin fonts($size, $weight, $line-height) {
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $line-height;
-}
-
-@mixin font-genarator($font-family, $weight, $url) {
-    @font-face {
-        font-family: $font-family;
-        font-weight: $weight;
-        src: url("../fonts/Gilroy-#{$url}.ttf");
-    }
-}
-
-@for $var from 1 to 4 {
-    $f-weight: 600, 500, 700;
-    $f-url: "SemiBold", "Medium", "MediumItalic";
-    @include font-genarator("Gilroy", nth($f-weight, $var), nth($f-url, $var));
-}
-
-// Container
-
-.container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-$screensize: (
-    "576px": "540px",
-    "768px": "720px",
-    "1200px": "1140px",
-    "1920px": "1800px",
-);
-
-@mixin media($width) {
-    @media only screen and (min-width: $width) {
-        @content;
-    }
-}
-
-@each $screen, $max in $screensize {
-    .container{
-        @include media($screen) {
-            max-width: unquote($max);
-        }
-    }
-}
-
-// common style
-.btn {
-    @include px(10px, 10px);
-    @include py(12px, 12px);
-    background-color: $dark12;
-    border-radius: 12px;
-    @include fonts(25px, 600, 30px);
-
-    @include media(768px) {
-        font-size: 30px;
-        line-height: 35px;
-    }
-
-    a{
-        color: $grayEC;
-    }
-}
 
 @import "partials/main-sec";
 @import "partials/introduction";
 @import "partials/projects";
+@import "partials/contact";
 @import "partials/footer";
 

@@ -2,27 +2,71 @@
     background-color: $grayE0;
 }
 header{
-    padding-top: 80px;
+    padding-top: 20px;
+
+    @include media($sm) {
+        padding-top: 30px;
+    }
+    @include media($md) {
+        padding-top: 40px;
+    }
+    @include media($lg) {
+        padding-top: 50px;
+    }
+    @include media($xl) {
+        padding-top: 60px;
+    }
+    @include media($xxl) {
+        padding-top: 70px;
+    }
+    @include media($mxl) {
+        padding-top: 80px;
+    }
 }
 .menu-wrap{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    @include my(40px, 40px);
+    @include my(20px, 20px);
 
-    @include media(1200px) {
-        @include my(50px, 88px);
+    @include media($sm) {
+        @include my(30px, 30px);
+    }
+    @include media($md) {
+        @include my(40px, 40px);
+    }
+    @include media($lg) {
+        @include my(55px, 55px);
+    }
+    @include media($xl) {
+        @include my(70px, 70px);
     }
     @include media(1920px) {
         @include my(130px, 130px);
     }
 
-    p, a{
+    p{
+        @include fonts(15px, 500, 19px);
+        color: $dark1C;
+
+        @include media($sm) {
+            font-size: 16px;
+        }
+        @include media($md) {
+            font-size: 17px;
+        }
+        @include media($lg) {
+            font-size: 18px;
+        }
+        @include media($xl) {
+            font-size: 20px;
+        }
+    }
+    a{
         @include fonts(20px, 500, 19px);
         color: $dark1C;
     }
-
     ul{
         display: none;
 
@@ -50,6 +94,7 @@ header{
     font-size: 25px;
     color: #41453C;
     border: none;
+    background: none;
 
     @include media(1200px) {
         display: none;
@@ -60,19 +105,24 @@ header{
 
 .main-sec-wrap{
     padding-bottom: 100px;
-    background-image: url("../img/main-sec-img.png");
-    background-size: 955px 853px;
-    background-position: 100% 31px;
-    background-repeat: no-repeat;
-    padding-top: 100px;
+    padding-top: 70px;
 
-    @include media(768px) {
+    @include media($sm) {
+        padding-top: 90;
+    }
+    @include media($md) {
+        padding-top: 110px;
+    }
+    @include media($lg) {
         padding-top: 130px;
     }
-
-    @include media(1200px) {
+    @include media($xl) {
         padding-bottom: 151px;
         padding-top: 190px;
+        background-image: url("../img/main-sec-img.png");
+        background-size: 955px 853px;
+        background-position: 100% 31px;
+        background-repeat: no-repeat;
     }
     @include media(1920px) {
         padding-bottom: 450px;
@@ -80,12 +130,13 @@ header{
     }
 
     h1{
-        @include fonts(70px, 600, 94px);
+        @include fonts(50px, 600, 52px);
         color: $gray9A;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        margin-top: 24px;
+        margin-left: 30px;
+        margin-top: 20px;
 
         @include media(768px) {
             font-size: 80px;
@@ -115,6 +166,7 @@ header{
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        margin-left: 0px;
 
         @include media(576px) {
             font-size: 90px;
@@ -128,7 +180,7 @@ header{
             margin-left: 50px;
         }
         @include media(1920px) {
-            font: 230px;
+            font-size: 230px;
             margin-top: 0px;
         }
     }
@@ -138,8 +190,13 @@ header{
     display: flex;
     flex-flow: row wrap;
     column-gap: 89px;
-    justify-content: center;
+    justify-content: start;
     margin-top: 40px;
+    margin-left: 50px;
+
+    @include media($sm) {
+        justify-content: center;
+    }
 
     @include media(1200px) {
         justify-content: start;
@@ -166,6 +223,17 @@ header{
         flex-flow: column wrap;
         @include fonts(16px, 500, 19px);
         color: #41453C;
+    }
+}
+.time-zone{
+    margin-left: 30px;
+    margin-top: 10px;
+
+    @include media($sm) {
+        margin-left: 60px;
+    }
+    @include media($md) {
+        margin-left: 0px;
     }
 }
 

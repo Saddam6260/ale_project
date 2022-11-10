@@ -1,0 +1,19 @@
+@mixin fonts($size, $weight, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+@mixin font-genarator($font-family, $weight, $url) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        src: url("../fonts/Gilroy-#{$url}.ttf");
+    }
+}
+
+@for $var from 1 to 4 {
+    $f-weight: 600, 500, 700;
+    $f-url: "SemiBold", "Medium", "MediumItalic";
+    @include font-genarator("Gilroy", nth($f-weight, $var), nth($f-url, $var));
+}
