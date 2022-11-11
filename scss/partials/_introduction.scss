@@ -9,16 +9,26 @@
 }
 
 .intro-wrap{
-    @include my(10px, 10px);
-    @include px(40px, 40px);
+    @include my(15px, 15px);
+    @include px(30px, 30px);
 
-    @include media(768px) {
+    @include media($sm) {
+        @include px(40px, 40px);
+        @include my(30px, 30px);
+    }
+    @include media($md) {
         @include px(50px, 50px);
         @include my(40px, 40px);
     }
-    @include media(1200px) {
+    @include media($lg) {
+        @include py(70px, 70px);
+        @include my(50px, 50px);
+    }
+    @include media($xl) {
         @include px(100px, 100px);
-        @include my(97px, 97px);
+    }
+    @include media(1400px) {
+        @include my(60px, 60px);
     }
     @include media(1920px) {
         @include my(18px, 18px);
@@ -29,12 +39,23 @@
     }
 
     p{
-        @include fonts(33px, 500, 40px);
+        @include fonts(23px, 500, 35px);
         color: $gray3C;
-
-        @include media(768px) {
-            font-size: 43px;
+        text-align: center;
+        @include media($xs) {
+            font-size: 25px;
+            line-height: 37px;
+        }
+        @include media($sm) {
+            font-size: 33px;
+            line-height: 45px;
+        }
+        @include media($md) {
+            font-size: 40px;
             line-height: 50px;
+        }
+        @include media($lg) {
+            text-align: start;
         }
         @include media(1200px) {
             font-size: 53px;
@@ -51,7 +72,7 @@
     @include media(768px) {
         margin-top: 50px;
     }
-    @include media(1200px) {
+    @include media($lg) {
         text-align: start;
     }
     .lbtn{

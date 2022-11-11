@@ -1,27 +1,13 @@
-.main-section{
+main{
     background-color: $grayE0;
+    height: 100vh;
+
+    @include media($lxl) {
+        height: initial;
+    }
 }
 header{
     padding-top: 20px;
-
-    @include media($sm) {
-        padding-top: 30px;
-    }
-    @include media($md) {
-        padding-top: 40px;
-    }
-    @include media($lg) {
-        padding-top: 50px;
-    }
-    @include media($xl) {
-        padding-top: 60px;
-    }
-    @include media($xxl) {
-        padding-top: 70px;
-    }
-    @include media($mxl) {
-        padding-top: 80px;
-    }
 }
 .menu-wrap{
     display: flex;
@@ -31,20 +17,20 @@ header{
     @include my(20px, 20px);
 
     @include media($sm) {
-        @include my(30px, 30px);
+        @include my(0px, 0px);
     }
-    @include media($md) {
-        @include my(40px, 40px);
-    }
-    @include media($lg) {
-        @include my(55px, 55px);
-    }
-    @include media($xl) {
-        @include my(70px, 70px);
-    }
-    @include media(1920px) {
-        @include my(130px, 130px);
-    }
+    // @include media($md) {
+    //     @include my(40px, 40px);
+    // }
+    // @include media($lg) {
+    //     @include my(55px, 55px);
+    // }
+    // @include media($xl) {
+    //     @include my(70px, 70px);
+    // }
+    // @include media(1920px) {
+    //     @include my(130px, 130px);
+    // }
 
     p{
         @include fonts(15px, 500, 19px);
@@ -104,7 +90,7 @@ header{
 // Main section
 
 .main-sec-wrap{
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
     padding-top: 70px;
 
     @include media($sm) {
@@ -126,7 +112,7 @@ header{
     }
     @include media(1920px) {
         padding-bottom: 450px;
-        padding-top: 268px;
+        padding-top: 238px;
     }
 
     h1{
@@ -159,7 +145,7 @@ header{
 .clip-heding{
 
     h1{
-        @include fonts(70px, 700, 133%);
+        @include fonts(60px, 700, 133%);
         font-style: italic;
         background-image: url("../img/text-bg.webp");
         background-size: cover;
@@ -167,17 +153,21 @@ header{
         -webkit-background-clip: text;
         color: transparent;
         margin-left: 0px;
-
+        @include media($xs) {
+            font-size: 70px;
+        }
         @include media(576px) {
             font-size: 90px;
         }
-
         @include media(768px) {
             font-size: 120px;
         }
         @include media(1200px) {
             font-size: 180px;
             margin-left: 50px;
+        }
+        @include media($xxl) {
+            font-size: 200px;
         }
         @include media(1920px) {
             font-size: 230px;
