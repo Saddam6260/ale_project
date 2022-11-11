@@ -9,6 +9,92 @@
         @include my(0px, 0px);
     }
 }
+
+.project-head{
+    display: flex;
+    @include mx(50px, 50px);
+    column-gap: 15px;
+
+    @include media($sm) {
+        @include mx(70px, 70px);
+        column-gap: 18px;
+    }
+    @include media($md) {
+        @include mx(80px, 80px);
+        column-gap: 20px;
+    }
+    @include media($lg) {
+        @include mx(90px, 90px);
+        column-gap: 30px;
+    }
+    @include media($xl) {
+        @include mx(120px, 120px);
+        column-gap: 40px;
+    }
+    @include media($xxl) {
+        @include mx(150px, 150px);
+        column-gap: 50px;
+    }
+    @include media($mxl) {
+        @include mx(170px, 170px);
+        column-gap: 60px;
+    }
+    @include media($lxl) {
+        @include mx(-80px, 170px);
+        column-gap: 80px;
+    }
+
+    h1{
+        color: $grayEC;
+        font-size: 35px;
+        font-weight: 400;
+
+        @include media($sm) {
+            font-size: 50px;
+        }
+        @include media($md) {
+            font-size: 70px;
+        }
+        @include media($lg) {
+            font-size: 90px;
+        }
+        @include media($xl) {
+            font-size: 110px;
+        }
+        @include media($xxl) {
+            font-size: 130px;
+        }
+        @include media($mxl) {
+            font-size: 145px;
+        }
+    }
+    p {
+        color: $grayEC;
+        margin-top: 8px;
+
+        @include media($sm) {
+            margin-top: 17px;
+            font-size: 17px;
+        }
+        @include media($md) {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        @include media($lg) {
+            margin-top: 25px;
+        }
+        @include media($xl) {
+            font-size: 22px;
+            margin-top: 34px;
+        }
+        @include media($xxl) {
+            margin-top: 43px;
+        }
+        @include media($mxl) {
+            margin-top: 50px;
+        }
+    }
+}
 .lssgg{
     display: flex;
     flex-flow: column wrap;
@@ -52,7 +138,7 @@
         max-width: 713px;
     }
     @include media(1920px) {
-        max-width: 885px;
+        max-width: 840px;
     }
     img{
         width: 100%;

@@ -19,18 +19,6 @@ header{
     @include media($sm) {
         @include my(0px, 0px);
     }
-    // @include media($md) {
-    //     @include my(40px, 40px);
-    // }
-    // @include media($lg) {
-    //     @include my(55px, 55px);
-    // }
-    // @include media($xl) {
-    //     @include my(70px, 70px);
-    // }
-    // @include media(1920px) {
-    //     @include my(130px, 130px);
-    // }
 
     p{
         @include fonts(15px, 500, 19px);
@@ -88,16 +76,19 @@ header{
 }
 
 // Main section
-
 .main-sec-wrap{
-    // padding-bottom: 100px;
     padding-top: 70px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
 
     @include media($sm) {
         padding-top: 90;
     }
     @include media($md) {
         padding-top: 110px;
+        align-items: center;
+
     }
     @include media($lg) {
         padding-top: 130px;
@@ -109,6 +100,7 @@ header{
         background-size: 955px 853px;
         background-position: 100% 31px;
         background-repeat: no-repeat;
+        align-items: start;
     }
     @include media(1920px) {
         padding-bottom: 450px;
@@ -118,10 +110,6 @@ header{
     h1{
         @include fonts(50px, 600, 52px);
         color: $gray9A;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-left: 30px;
         margin-top: 20px;
 
         @include media(768px) {
@@ -129,7 +117,6 @@ header{
         }
 
         @include media(1200px) {
-            justify-content: start;
             margin-left: 139px;
             font-size: 130px;
             line-height: 152px;
@@ -177,19 +164,20 @@ header{
 }
 
 .lt-wrap{
-    display: flex;
-    flex-flow: row wrap;
     column-gap: 89px;
-    justify-content: start;
     margin-top: 40px;
-    margin-left: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
 
     @include media($sm) {
-        justify-content: center;
+        flex-flow: row wrap;
     }
-
+    @include media($md) {
+        display: flex;
+    }
     @include media(1200px) {
-        justify-content: start;
+        // justify-content: start;
         margin-top: 60px;
         margin-left: 128px;
     }
@@ -216,14 +204,11 @@ header{
     }
 }
 .time-zone{
-    margin-left: 30px;
     margin-top: 10px;
+    margin-left: 2px;
 
-    @include media($sm) {
-        margin-left: 60px;
-    }
     @include media($md) {
-        margin-left: 0px;
+        margin-left: none;
     }
 }
 

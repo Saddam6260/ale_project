@@ -210,6 +210,9 @@ header {
 
 .main-sec-wrap {
   padding-top: 70px;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
 }
 @media only screen and (min-width: 576px) {
   .main-sec-wrap {
@@ -219,6 +222,7 @@ header {
 @media only screen and (min-width: 768px) {
   .main-sec-wrap {
     padding-top: 110px;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -234,6 +238,7 @@ header {
     background-size: 955px 853px;
     background-position: 100% 31px;
     background-repeat: no-repeat;
+    align-items: start;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -247,10 +252,6 @@ header {
   font-weight: 600;
   line-height: 52px;
   color: #8D909A;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-left: 30px;
   margin-top: 20px;
 }
 @media only screen and (min-width: 768px) {
@@ -260,7 +261,6 @@ header {
 }
 @media only screen and (min-width: 1200px) {
   .main-sec-wrap h1 {
-    justify-content: start;
     margin-left: 139px;
     font-size: 130px;
     line-height: 152px;
@@ -320,21 +320,24 @@ header {
 }
 
 .lt-wrap {
-  display: flex;
-  flex-flow: row wrap;
   column-gap: 89px;
-  justify-content: start;
   margin-top: 40px;
-  margin-left: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
 }
 @media only screen and (min-width: 576px) {
   .lt-wrap {
-    justify-content: center;
+    flex-flow: row wrap;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .lt-wrap {
+    display: flex;
   }
 }
 @media only screen and (min-width: 1200px) {
   .lt-wrap {
-    justify-content: start;
     margin-top: 60px;
     margin-left: 128px;
   }
@@ -365,17 +368,12 @@ header {
 }
 
 .time-zone {
-  margin-left: 30px;
   margin-top: 10px;
-}
-@media only screen and (min-width: 576px) {
-  .time-zone {
-    margin-left: 60px;
-  }
+  margin-left: 2px;
 }
 @media only screen and (min-width: 768px) {
   .time-zone {
-    margin-left: 0px;
+    margin-left: none;
   }
 }
 
@@ -580,6 +578,134 @@ header {
   }
 }
 
+.project-head {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  column-gap: 15px;
+}
+@media only screen and (min-width: 576px) {
+  .project-head {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    column-gap: 18px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project-head {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project-head {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project-head {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    column-gap: 40px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-head {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    column-gap: 50px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .project-head {
+    margin-top: 170px;
+    margin-bottom: 170px;
+    column-gap: 60px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .project-head {
+    margin-top: -80px;
+    margin-bottom: 170px;
+    column-gap: 80px;
+  }
+}
+.project-head h1 {
+  color: #EFF3EC;
+  font-size: 35px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 576px) {
+  .project-head h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project-head h1 {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project-head h1 {
+    font-size: 90px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project-head h1 {
+    font-size: 110px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-head h1 {
+    font-size: 130px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .project-head h1 {
+    font-size: 145px;
+  }
+}
+.project-head p {
+  color: #EFF3EC;
+  margin-top: 8px;
+}
+@media only screen and (min-width: 576px) {
+  .project-head p {
+    margin-top: 17px;
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project-head p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project-head p {
+    margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project-head p {
+    font-size: 22px;
+    margin-top: 34px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-head p {
+    margin-top: 43px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .project-head p {
+    margin-top: 50px;
+  }
+}
+
 .lssgg {
   display: flex;
   flex-flow: column wrap;
@@ -638,7 +764,7 @@ header {
 }
 @media only screen and (min-width: 1920px) {
   .lssgg-img {
-    max-width: 885px;
+    max-width: 840px;
   }
 }
 .lssgg-img img {
@@ -1501,6 +1627,27 @@ header {
     width: auto;
   }
 }
+.socials p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #41453C;
+}
+@media only screen and (min-width: 768px) {
+  .socials p {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .socials p {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .socials p {
+    font-size: 25px;
+  }
+}
 .socials ul {
   display: flex;
   flex-flow: row wrap;
@@ -1515,17 +1662,6 @@ header {
 @media only screen and (min-width: 768px) {
   .socials ul {
     margin-top: 30px;
-  }
-}
-.socials ul p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 23px;
-  color: #41453C;
-}
-@media only screen and (min-width: 768px) {
-  .socials ul p {
-    font-size: 20px;
   }
 }
 .socials ul a {
@@ -1597,6 +1733,16 @@ header {
     margin-bottom: 30px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .version p {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .version p {
+    font-size: 25px;
+  }
+}
 .version a {
   font-size: 20px;
   font-weight: 500;
@@ -1654,6 +1800,16 @@ header {
 @media only screen and (min-width: 992px) {
   .c-location p {
     margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .c-location p {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .c-location p {
+    font-size: 25px;
   }
 }
 .c-location a {
