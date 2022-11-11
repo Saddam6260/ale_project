@@ -3,12 +3,16 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    @include my(15px, 15px);
+
+    @include media($xs) {
+        @include my(0px, 0px);
+    }
 }
 .lssgg{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
     margin-bottom: 70px;
     max-width: 413px;
 
@@ -16,25 +20,39 @@
         margin-bottom: 100px;
         max-width: 513px;
     }
+    @include media($lg) {
+        max-width: 613px;
+        margin-bottom: 130xp;
+    }
     @include media(1200px) {
-        margin-bottom: 200px;
+        margin-bottom: 150px;
         display: flex;
         flex-flow: row wrap;
-        @include my(21px, 21px);
         max-width: 1095px;
+    }
+    @include media($xxl) {
+        max-width: 1300px;
+        margin-bottom: 170px;
     }
     @include media(1920px) {
         align-items: start;
         max-width: 1551px;
+        margin-bottom: 200px;
     }
 }
 
 .lssgg-img{
-    @include media(1200px) {
+    @include media($xl) {
         max-width: 513px;
     }
+    @include media($xxl) {
+        max-width: 613px;
+    }
+    @include media($mxl) {
+        max-width: 713px;
+    }
     @include media(1920px) {
-        max-width: 900px;
+        max-width: 885px;
     }
     img{
         width: 100%;
@@ -43,76 +61,149 @@
 
 .lssgg-body{
     text-align: center;
-
-    @include media(1200px) {
+    @include media($xl) {
         text-align: start;
         margin-left: 57px;
-        max-width: 521px;
+        max-width: 450px;
+        text-align: start;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+    @include media($xxl) {
+        margin-left: 80px;
     }
     @include media(1920px) {
         margin-left: 120px;
     }
-    p{
+}
+.issu-p{
+    margin-top: 10px;
+    @include fonts(17px, 500, 25px);
+    color: $grayEC;
+
+    @include media($xs) {
+        margin-top: 18px;
+        font-size: 20px;
+    }
+    @include media($sm) {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    @include media($md) {
+        font-size: 22px;
+        line-height: 29px;
+        margin-top: 35px;
+    }
+    @include media($lg) {
         margin-top: 50px;
-        @include fonts(20px, 500, 25px);
-        color: $grayEC;
-
-        @include media(768px) {
-            font-size: 25px;
-            line-height: 29px;
-            margin-top: 70px;
-        }
-        @include media(1200px) {
-            margin-top: 0px;
-        }
+        font-size: 25px;
     }
-
-    h1{
-        margin-top: 5px;
-        @include fonts(40px, 500, 45px);
-        color: white;
-
-        @include media(768px) {
-            font-size: 45px;
-            line-height: 53px;
-        }
-    }
-    h3{
-        display: flex;
-        flex-flow: column wrap;
-        color: $gray93;
-        margin-top: 5px;
-        @include fonts(40px, 500, 45px);
-
-        @include media(768px) {
-            font-size: 45px;
-            line-height: 53px;
-        }
-    }
-    h2{
-        color: $grayEC;
-        margin-top: 20px;
-        @include fonts(30px, 500, 35px);
-
-        @include media(768px) {
-            font-size: 35px;
-            line-height: 41px;
-        }
-        @include media(1920px) {
-            margin-top: 232px;
-        }
+    @include media(1200px) {
+        margin-top: 0px;
     }
 }
+.issu-h1{
+    margin-top: 3px;
+    @include fonts(30px, 500, 45px);
+    color: white;
 
+    @include media($sm) {
+        font-size: 32px;
+    }
+    @include media($md) {
+        font-size: 35px;
+        line-height: 53px;
+        margin-top: 5px;
+    }
+    @include media($lg) {
+        font-size: 39px;
+    }
+    @include media($xl) {
+        font-size: 43px;
+    }
+    @include media($xxl) {
+        font-size: 45px;
+    }
+    @include media($lxl) {
+        margin-top: 10px;
+    }
+}
+.issu-h3{
+    display: flex;
+    flex-flow: column wrap;
+    color: $gray93;
+    margin-top: 5px;
+    @include fonts(30px, 500, 45px);
+
+    @include media($sm) {
+        font-size: 32px;
+    }
+    @include media($md) {
+        font-size: 35px;
+        line-height: 53px;
+        margin-top: 5px;
+    }  
+    @include media($lg) {
+        font-size: 39px;
+    }
+    @include media($xl) {
+        font-size: 43px;
+    }
+    @include media($xxl) {
+        font-size: 45px;
+    }
+    @include media($lxl) {
+        margin-top: 15px;
+    }
+}
+.issu-h2{
+    color: $grayEC;
+    margin-top: 20px;
+     @include fonts(30px, 500, 35px);
+
+    @include media(768px) {
+        font-size: 35px;
+        line-height: 41px;
+    }
+    @include media(1920px) {
+        margin-top: 232px;
+    }
+}
 .lssgg-btn{
-    margin-top: 30px;
+    margin-top: 10px;
 
+    @include media($sm) {
+        margin-top: 13px;
+    }
+    @include media($md) {
+        margin-top: 15px;
+    }
+    @include media($lg) {
+        margin-top: 20px;
+    }
+    @include media($xl) {
+        margin-top: 23px;
+    }
+    @include media($xxl) {
+        margin-top: 25px;
+    }
+    @include media($mxl) {
+        margin-top: 30px;
+    }
     .btn{
         background-color:  #FEFEFF;
         border-radius: 7px;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 21px;
         color: $dark12;
+
+        @include media($sm) {
+            font-size: 16px;
+        }
+        @include media($md) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -124,20 +215,25 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
 
     @include media(768px) {
         max-width: 448px;
         margin-bottom: 100px;
     }
-    @include media(1200px) {
+    @include media($lg) {
+        max-width: 550px;
+    }
+    @include media($xl) {   
         margin-bottom: 200px;
-        max-width: 1036px;
+        max-width: 1050px;
         flex-flow: row wrap;
         justify-content: space-between;
         column-gap: 188px;
     }
-    @include media(1920px) {
+    @include media($xxl) {
+        max-width: 1100px;
+    }
+    @include media($mxl) {
         max-width: 1310px;
     }
 
@@ -153,10 +249,16 @@
 .insurence-img{
 
     @include media(1200px) {
-        max-width: 448px;
+        max-width: 470px;
         display: flex;
         flex-flow: column;
         order: 2;
+    }
+    @include media($xxl) {
+        max-width: 500px;
+    }
+    @include media($mxl) {
+        max-width: 600px;
     }
     @include media(1920px) {
         max-width: 722px;
@@ -174,14 +276,23 @@
 .moon-race{
     max-width: 413px;
 
-    @include media(768px) {
+    @include media($sm) {
+
+    }
+    @include media($md) {
         max-width: 597px;
     }
-    @include media(992px) {
+    @include media($lg) {
         max-width: 797px;
     }
-    @include media(1200px) {
+    @include media($xl) {
         max-width: 985px;
+    }
+    @include media($xxl) {
+        max-width: 1100px;
+    }
+    @include media($mxl) {
+        max-width: 1200px;
     }
     @include media(1920px) {
         max-width: 1258px;
@@ -200,62 +311,15 @@
         justify-content: space-between;
         align-items: center;
     }
-
-    p{
-        @include fonts(20px, 500, 25px);
-        color: $grayEC;
-        margin-top: 50px;
-
-        @include media(768px) {
-            margin-top: 70px;
-        }
-        @include media(1200px) {
-            margin-top: 42px;
-        }
-    }
-    h1{
-        @include fonts(35px, 500, 45px);
-        color: white;
-        margin-top: 10px;
-
-        @include media(768px) {
-            font-size: 45px;
-            line-height: 53px;
-            margin-top: 22px;
-        }
-        @include media(1200px) {
-            margin-top: 10px;
-        }
-    }
-    h3{
-        @include fonts(35px, 500, 45px);
-        color: $gray93;
-        margin-top: 10px;
-
-        @include media(768px) {
-            font-size: 45px;
-            line-height: 53px;
-            margin-top: 22px;
-        }
-        @include media(1920px) {
-            margin-top: 10px;
-        }
-    }
-
 }
 .branding{
-    margin-top: 10px;
 
-    @include media(768px) {
-        margin-top: 22px;
-    }
     h2{
-        @include fonts(30px, 500, 35px);
-        color: $grayEC;
-
-        @include media(768px) {
-            font-size: 35px;
-            line-height: 41px;
+        @include media($mxl) {
+            margin-top: 0px;
+        }
+        @include media($lxl) {
+            margin-top: 0px;
         }
     }
 }
@@ -276,11 +340,25 @@
     }
     a{
         color: $grayEC;
-        @include fonts(35px, 500, 40px);
+        @include fonts(20px, 500, 40px);
         
-        @include media(768px) {
-            font-size: 40px;
-            line-height: 47px;
+        @include media($sm) {
+            font-size: 23px;
+        }
+        @include media($md) {
+            font-size: 26px;
+            line-height: 30px;
+        }
+        @include media($lg){
+            font-size: 30px;
+            line-height: 40px;
+        } 
+        @include media($xl) {
+            font-size: 32px;
+            line-height: 45px;
+        }
+        @include media($xxl) {
+            font-size: 35p;
         }
     }    
 }

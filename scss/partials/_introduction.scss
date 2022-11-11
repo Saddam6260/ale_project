@@ -78,15 +78,45 @@
     .lbtn{
         border: none;
         background-color: $dark12;
-        @include py(25px, 25px);
-        @include px(11px, 11px);
+        @include py(20px, 20px);
+        @include px(9px, 9px);
         border-radius: 6px;
-        @include fonts(30px, 500, 40px);
+        @include fonts(20px, 500, 30px);
         color: $grayEC;
 
-        @include media(768px) {
-            font-size: 40px;
+        @include media($sm) {
+            font-size: 23px;
+            line-height: 32px;
+        }
+        @include media($md) {
+            font-size: 26pxpx;
+            line-height: 35px;
+            @include py(22px, 22px);
+        }
+        @include media($lg) {
+            font-size: 30px;
+            line-height: 40px;
+            @include py(23px, 23px);
+            @include px(10px, 10px);
+        }
+        @include media($xl) {
+            font-size: 33px;
+            line-height: 42px;
+            @include py(24px, 24px);
+            @include px(10px, 10px);
+        }
+        @include media($xxl) {
+            font-size: 36px;
+            line-height: 45px;
+            @include py(25px, 25px);
+            @include px(11px, 11px);
+        }
+        @include media($mxl) {
+            font-size: 38px;
             line-height: 47px;
+        }
+        @include media($lxl) {
+            font-size: 40px;
         }
     }
 }

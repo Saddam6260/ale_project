@@ -11,13 +11,15 @@ a{
 }
 
 .btn {
-    @include px(10px, 10px);
-    @include py(12px, 12px);
+    @include px(8px, 8px);
+    @include py(10px, 10px);
     background-color: $dark12;
     border-radius: 12px;
     @include fonts(25px, 600, 30px);
 
     @include media(768px) {
+        @include px(10px, 10px);
+        @include py(12px, 12px);
         font-size: 30px;
         line-height: 35px;
     }
